@@ -5,18 +5,19 @@
    <meta charset="UTF-8">  
  </head>  
  <!-- ИНИЦИАЛИЗАЦИЯ FIREBASE НАЧАЛО. ВСТАВЬТЕ СВОЙ КОД ИЗ КОНСОЛИ FIREBASE СЮДА-->
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
+  // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBhshsjowHQ3V",
-    authDomain: "fir-auth-a60aa.firebaseapp.com",
-    databaseURL: "https://fir-auth-a60aa.firebaseio.com",
-    projectId: "fir-auth-a60aa",
-    storageBucket: "fir-auth-a60aa.appspot.com",
-    messagingSenderId: "2146"
+    apiKey: "AIzaSyCNq7",
+    authDomain: "fir-auth-62ddf.firebaseapp.com",
+    databaseURL: "https://fir-auth-62ddf.firebaseio.com",
+    projectId: "fir-auth-62ddf",
+    storageBucket: "fir-auth-62ddf.appspot.com",
+    messagingSenderId: "92409789"
   };
   firebase.initializeApp(config);
-</script> 
+</script>
  <body>  
  <!-- Простой пример скрипта для добавление текста к странице который отображаем имя пользователя и email -->
  <script>  
@@ -31,11 +32,9 @@
     // В другом случае игнорируем если это обновление токена
     // Обновляем UID текущего пользователя 
    currentUid = uid;  
-   document.body.innerHTML = '<h1> Поздравляю ' + user.displayName + ', все прошло успешно! </h1> <h2> Теперь давай изучать что-нибудь еще по Firebase. </h2> <h2> Необходимо проверить ваш email адрес или переустановить пароль? Firebase может это все сделать с помощью твоего email' + user.email + '. <h/2>';  
   } else {  
     // Операция выхода из приложения. Переустанавливает UID текущего пользователя
    currentUid = null;  
-   console.log("no user signed in");  
   }  
  });  
  </script>  
